@@ -56,8 +56,12 @@ Our objective is to employ different Machine Learning techniques to evaluate cre
 
 - <strong>Accuracy score:</strong> 0.8229
 - <strong>True positives:</strong> 186, <strong>false postives:</strong> 5662, <strong>false negatives:</strong> 60, <strong>true negatives:</strong> 45704
-- <strong>Precision:</strong> 0.99, <strong>recall:</strong> 0.61, <strong>f1 score:</strong> 0.75
+- <strong>Precision:</strong> 0.99, <strong>recall:</strong> 0.89, <strong>f1 score:</strong> 0.94
 
 ## Summary
+
 ### Conclusion
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning
+
+From all our models we can see that they all have accuracy scores greater than 50%. This means that they will make the correct prediction more than half the time. The highest accuracy scores belong to our two Ensemble Classifier models which had accuracies of 75% (`BalancedRandomForestClassifier`) and 83% (`EasyEnsembleClassifier`). 
+<strong>Precision</strong> is a measure of how reliable a positive classification is. For our loaner this would be how reliable our risky designation is. A low precision is okay because it means that we are over-flagging loans as risky.
+<strong>Recall</strong> is a measure of how many truly risky loans were properly flagged. Based on these definitions I would recommend the model with the highest recall value and that is the `EasyEnsembleClassifier`. Not only does it have the highest recall value associated with flagging risky loans it also has the highest overall accuracy, overall precision, overall recall, and overall f1 score.
